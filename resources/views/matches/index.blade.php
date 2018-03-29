@@ -5,7 +5,7 @@
  <div class="row">
         <div class="col-md-12 ">
             <div class="panel panel-default">
-                <div class="panel-heading">Add Matches</div>
+                <div class="panel-heading">Add Matchess</div>
 
                 <div class="panel-body">
 <form method="POST" enctype="multipart/form-data" class="well">
