@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Team;
+use App\Groupe;
 
 class ApiController extends Controller
 {
@@ -18,7 +19,10 @@ class ApiController extends Controller
         $teams = Team::orderBy('team_name','ASC')->get();
         return $teams;
     }
-
+public function get_all_groups(){
+    $groups = Groupe::orderBy('gr_name','ASC')->get();
+    return $groups;
+}
     /**
      * Show the form for creating a new resource.
      *
