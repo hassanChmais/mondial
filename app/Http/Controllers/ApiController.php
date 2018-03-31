@@ -23,8 +23,7 @@ public function get_all_groups(){
     $groups = Groupe::orderBy('gr_name','ASC')->get();
     return $groups;
 }
-public function get_all_teamGr(Request $r){
-    $id=$r->input('id');
+public function get_all_teamGr($id){
     $team=GroupeTeam::where('groupe_teams.groupId','=',$id)->
                 join('teams','groupe_teams.teamId','teams.id')->
              select('teams.*','groupe_teams.*')

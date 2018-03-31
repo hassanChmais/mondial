@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Route::get('api/get_all_teams','ApiController@get_all_teams')->name('get_all_teams');
 Route::get('api/get_all_groups','ApiController@get_all_groups')->name('get_all_groups');
-Route::post('api/get_all_teamGr','ApiController@get_all_teamGr')->name('get_all_teamGr');
+Route::get('api/get_all_teamGr/{id}','ApiController@get_all_teamGr')->name('get_all_teamGr');
 Route::middleware('auth')->group(function () {
 	//Rounds
 Route::get('/addRound', 'RoundController@index')->name('AddRound');
