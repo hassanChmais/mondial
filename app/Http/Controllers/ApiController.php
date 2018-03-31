@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Team;
 use App\Groupe;
-
+use App\GroupeTeam;
 class ApiController extends Controller
 {
     /**
