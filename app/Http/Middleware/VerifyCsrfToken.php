@@ -11,19 +11,7 @@ class VerifyCsrfToken extends Middleware
      *
      * @var array
      */
-    private $openRoutes = ['free/route', 'free/too'];
-
-//modify this function
-public function handle($request, Closure $next)
-    {
-        //add this condition 
-    foreach($this->openRoutes as $route) {
-
-      if ($request->is($route)) {
-        return $next($request);
-      }
-    }
-    
-    return parent::handle($request, $next);
-  }
+    protected $except = [
+        //
+    ];
 }
