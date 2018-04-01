@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Team;
 use App\Groupe;
 use App\GroupeTeam;
+use App\Round;
 class ApiController extends Controller
 {
     /**
@@ -29,6 +30,13 @@ public function get_all_teamGr($id){
              select('teams.*','groupe_teams.*')
             ->get();
             return $team;
+}
+public function add_round(Request $r){
+    $name = $r->input('round_name');
+    $round = new Round();
+    $round->name = $name;
+    $round->status = 0 ;
+    $round->save();
 }
     /**
      * Show the form for creating a new resource.
